@@ -1,0 +1,54 @@
+import java.util.Scanner;
+
+public class loops {
+
+    public static void main(String[] args) {
+
+        // FOR LOOP
+        // for (int i = 0; i <11; i++) {
+        // System.out.println(i);
+        // }
+
+        // WHILE LOOP
+        // int i = 0;
+        // while (i < 11) {
+        // System.out.println(i);
+        // i++;
+        // }
+
+        // DO WHILE LOOP
+        // int i = 0;
+        // do {
+        // System.out.println(i);
+        // i++;
+        // } while (i < 11);
+
+        // // while n do while- (False condition for checking the difference between
+        // while n do while)
+        // int i = 12;
+        // while (i < 11) {
+        // System.out.println(i);
+        // i++;
+        // }
+        // do {
+        // System.out.println(i);
+        // i++;
+        // } while (i < 11);
+
+        // Q- print the sum of first n Natural numbers.
+        // int sum = 0;
+        // Scanner sc = new Scanner(System.in);
+        // int n = sc.nextInt();
+        // for (int i = 1; i <= n; i++) {
+        // sum = sum + i;
+        // }
+        // System.out.println(sum);
+
+        // Q - print the table of a numberinput by the user.
+        Scanner sc = new Scanner(System.in);
+        int x = sc.nextInt();
+        for (int i = 1; i < 11; i++) {
+            System.out.println(i * x);
+        }
+    }
+}
