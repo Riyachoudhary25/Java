@@ -1,7 +1,7 @@
 //Calculate 2 number
 public class calculate {
     public static void main(String[] args) {
-
+//Variable
         int a = 10;
         int b = 20;
         int sum = a + b;
