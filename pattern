@@ -1,102 +1,102 @@
 public class pattern {
     public static void main(String[] args) {
 
-        // // Print Solid Rectangle -->
-        // int n = 4;
-        // int m = 5;
-        // // Outer_Loop
-        // for (int i = 1; i <= n; i++) {
-        // // Inner_Loop
-        // for (int j = 1; j <= m; j++) {
-        // System.out.print("*");
-        // }
-        // System.out.println();
-        // }
+        // Print Solid Rectangle -->
+        int n = 4;
+        int m = 5;
+        // Outer_Loop
+        for (int i = 1; i <= n; i++) {
+        // Inner_Loop
+        for (int j = 1; j <= m; j++) {
+        System.out.print("*");
+        }
+        System.out.println();
+        }
 
         // print Hollow Rectangle -->
-        // int n = 4;
-        // int m = 5;
-        // // Outer loop
-        // for (int i = 1; i <= n; i++) {
-        // for (int j = 1; j <= m; j++) {
-        // // cell->(i,j)
-        // if (i == 1 || j == 1 || i == n || j == m) {
-        // System.out.print("*");
-        // } else {
-        // System.out.print(" ");
-        // }
-        // }
-        // System.out.println();
-        // }
+        int n = 4;
+        int m = 5;
+        // Outer loop
+        for (int i = 1; i <= n; i++) {
+        for (int j = 1; j <= m; j++) {
+        // cell->(i,j)
+        if (i == 1 || j == 1 || i == n || j == m) {
+        System.out.print("*");
+        } else {
+        System.out.print(" ");
+        }
+        }
+        System.out.println();
+        }
 
         // Half Pyramid -->
-        // int n = 4;
-        // for (int i = 0; i <= n; i++) {
-        // for (int j = 1; j <= i; j++) {
-        // System.out.print("*");
-        // }
-        // System.out.println();
-        // }
+        int n = 4;
+        for (int i = 0; i <= n; i++) {
+        for (int j = 1; j <= i; j++) {
+        System.out.print("*");
+        }
+        System.out.println();
+        }
 
-        // // Inverted Half Pyramid -->
-        // int n = 4;
-        // for (int i = n; i >= 1; i--) {
-        // for (int j = 1; j <= i; j++) {
-        // System.out.print("*");
-        // }
-        // System.out.println();
-        // }
+         // Inverted Half Pyramid -->
+        int n = 4;
+        for (int i = n; i >= 1; i--) {
+        for (int j = 1; j <= i; j++) {
+        System.out.print("*");
+        }
+        System.out.println();
+        }
 
         // Inverted Half Pyramid(Rotated by 180 deg) -->
-        // int n = 4;
-        // for (int i = 1; i <= n; i++) {
-        // // inner loop --> space print
-        // for (int j = 1; j <= n - i; j++) {
-        // System.out.print(" ");
-        // }
-        // //inner loop --> star print
-        // for (int j = 1; j <= i; j++) {
-        // System.out.print("*");
-        // }
-        // System.out.println();
-        // }
+        int n = 4;
+        for (int i = 1; i <= n; i++) {
+        // inner loop --> space print
+        for (int j = 1; j <= n - i; j++) {
+        System.out.print(" ");
+        }
+        //inner loop --> star print
+        for (int j = 1; j <= i; j++) {
+        System.out.print("*");
+        }
+        System.out.println();
+        }
 
         // Half pyramid with Numbers -->
-        // int n = 4;
-        // for (int i = 0; i <= n; i++) {
-        // for (int j = 1; j <= i; j++) {
-        // System.out.print(j+" ");
-        // }
-        // System.out.println();
-        // }
+        int n = 4;
+        for (int i = 0; i <= n; i++) {
+        for (int j = 1; j <= i; j++) {
+        System.out.print(j+" ");
+        }
+        System.out.println();
+        }
 
         // Inverted Half pyramid with Numbers -->
-        // int n = 4;
-        // for (int i = n; i >= 1; i--) {
-        // for (int j = 1; j <= i; j++) {
-        // System.out.print(j + " ");
-        // }
-        // System.out.println();
-        // }
-        // second Approach to print inverted half pyramid -->
-        // int m = 4;
-        // for (int i = 1; i <= m; i++) {
-        // for (int j = 1; j <= m - i + 1; j++) {
-        // System.out.print(j+" ");
-        // }
-        // System.out.println();
-        // }
+        int n = 4;
+        for (int i = n; i >= 1; i--) {
+        for (int j = 1; j <= i; j++) {
+        System.out.print(j + " ");
+        }
+        System.out.println();
+        }
+        second Approach to print inverted half pyramid -->
+        int m = 4;
+        for (int i = 1; i <= m; i++) {
+        for (int j = 1; j <= m - i + 1; j++) {
+        System.out.print(j+" ");
+        }
+        System.out.println();
+        }
 
         // Floyd's pattern -->
-        // int n = 5;
-        // int Number = 1;
-        // for (int i = 1; i <= n; i++) {
-        // for (int j = 1; j <= i; j++) {
-        // System.out.print(Number+" ");
-        // Number++;
-        // }
-        // System.out.println();
-        // }
+        int n = 5;
+        int Number = 1;
+        for (int i = 1; i <= n; i++) {
+        for (int j = 1; j <= i; j++) {
+        System.out.print(Number+" ");
+        Number++;
+        }
+        System.out.println();
+        }
 
         // 0 1 Triangle -->
         int n = 4;
