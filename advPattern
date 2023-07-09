@@ -1,0 +1,113 @@
+public class advPattern {
+    public static void main(String[] args) {
+        // Butterfly Pattern -->
+        // int n = 5;
+        // // Upper Half -->
+        // for (int i = 1; i <= n; i++) {
+        // // First Part -->
+        // for (int j = 1; j <= i; j++) {
+        // System.out.print("*");
+        // }
+        // // spaces -->
+        // int space = 2 * (n - i);
+        // for (int j = 1; j <= space; j++) {
+        // System.out.print(" ");
+        // }
+        // // Second Part -->
+        // for (int j = 1; j <= i; j++) {
+        // System.out.print("*");
+        // }
+        // System.out.println();
+        // }
+        // // Lower Half -->
+        // for (int i = n; i >= 1; i--) {
+        // // First part -->
+        // for (int j = 1; j <= i; j++) {
+        // System.out.print("*");
+        // }
+        // // spaces -->
+        // int space = 2 * (n - i);
+        // for (int j = 1; j <= space; j++) {
+        // System.out.print(" ");
+        // }
+        // // Second half -->
+        // for (int j = 1; j <= i; j++) {
+        // System.out.print("*");
+        // }
+        // System.out.println();
+        // }
+
+        // Print solid Rhombus -->
+        // int n = 5;
+        // for (int i = 1; i <= n; i++) {
+        // // Spaces -->
+        // for (int j = 1; j <= n - i; j++) {
+        // System.out.print(" ");
+        // }
+        // // Star print -->
+        // for (int j = 1; j <= n; j++) {
+        // System.out.print("*");
+        // }
+        // System.out.println();
+        // }
+
+        // Number Pyramid -->
+        // int n = 5;
+        // for (int i = 1; i <= n; i++) {
+        // // spaces -->
+        // for (int j = 1; j <= n - i; j++) {
+        // System.out.print(" ");
+        // }
+        // // Numbers --> print row no , row no times.
+        // for (int j = 1; j <= i; j++) {
+        // System.out.print(i + " ");
+        // }
+        // System.out.println();
+        // }
+
+        // Palidromic Pattern -->
+        // int n = 5;
+        // for (int i = 1; i <= n; i++) {
+        // // spaces -->
+        // for (int j = 1; j <= n - i; j++) {
+        // System.out.print(" ");
+        // }
+        // // 1st Half numbers -->
+        // for (int j = i; j >= 1; j--) {
+        // System.out.print(j);
+        // }
+        // // 2nd half numbers -->
+        // for (int j = 2; j <= i; j++) {
+        // System.out.print(j);
+        // }
+        // System.out.println();
+        // }
+
+        //
+        int n = 4;
+        // Upper part
+        for (int i = 1; i <= n; i++) {
+            // spaces -->
+            for (int j = 1; j <= n - i; j++) {
+                System.out.print(" ");
+            }
+            // star print -->
+            for (int j = 1; j <= 2 * i - 1; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        // Lower Part -->
+        for (int i = n; i >= 1; i--) {
+            // spaces -->
+            for (int j = 1; j <= n - i; j++) {
+                System.out.print(" ");
+            }
+            // Star print -->
+            for (int j = 1; j <= 2 * i - 1; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
