@@ -1,0 +1,100 @@
+import java.util.ArrayList;
+
+public class Recursion3 {
+
+    // Q1. Print all the permutations of a string.
+    // Time complexity - O(n!)
+    public static void printPermutation(String str, String permutations) {
+        if (str.length() == 0) {
+            System.out.println(permutations);
+            return;
+        }
+        for (int i = 0; i < str.length(); i++) {
+            char currChar = str.charAt(i);
+            String newStr = str.substring(0, i) + str.substring(i + 1);
+            printPermutation(newStr, permutations + currChar);
+        }
+    }
+
+    // Q2. CountPathMaze //Time complexity - O(2^(m+n))
+    public static int countPaths(int i, int j, int n, int m) {
+        if (i == n - 1 || j == m - 1) {
+            return 1;
+        }
+        return countPaths(i + 1, j, n, m) + countPaths(i, j + 1, n, m); // downwards(i+1),right(j+1)
+    }
+
+    // Q3. Tiling problem
+    public static int placeTiles(int n, int m) {
+        if (n == m) {
+            return 2;
+        }
+        if (n < m) {
+            return 1;
+        }
+        int vertPlacement = placeTiles(n - m, m);
+
+        int horPlacement = placeTiles(n - 1, m);
+
+        return vertPlacement + horPlacement;
+    }
+
+    // Q4. Friends pairing problem
+
+    public static int callGuests(int n) {
+        if (n <= 1) {
+            return 1;
+        }
+        // single
+        int ways1 = callGuests(n - 1);
+        // pair
+        int ways2 = (n - 1) * callGuests(n - 2);
+        return ways1 + ways2;
+    }
+
+    // Q5. Subsets of a set
+    public static void printSubset(ArrayList<Integer> subset) {
+        for (int i = 0; i < subset.size(); i++) {
+            System.out.print(subset.get(i) + " ");
+        }
+        System.out.println();
+    }
+
+    public static void findSubsets(int n, ArrayList<Integer> subset) {
+        if (n == 0) {
+            printSubset(subset);
+            return;
+        }
+        // Add
+        subset.add(n);
+        findSubsets(n - 1, subset);
+        // add nhi hoga
+        subset.remove(subset.size() - 1);
+        findSubsets(n - 1, subset);
+    }
+
+    public static void main(String[] args) {
+
+        // Q1. Print all the permutations of a string.
+        // String str = "abc";
+        // printPermutation(str, " ");
+
+        // Q2. CountPathMaze
+        // int n = 3, m = 3;
+        // System.out.println(countPaths(0, 0, n, m));
+
+        // Q3. Tiling problem
+        // int n = 4, m = 2;
+        // System.out.println(placeTiles(n, m));
+
+        // Q4. Friends pairing problem
+        // int n = 4;
+        // System.out.println(callGuests(n));
+
+        // Q5. Subsets of a set
+        int n = 3;
+        ArrayList<Integer> subset = new ArrayList<>();
+        findSubsets(n, subset);
+
+    }
+}
