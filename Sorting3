@@ -1,5 +1,7 @@
 
-//QUICK SORT -->
+//QUICK SORT --> 
+Worst case-> O(n^2)
+Average case -> O(nlogn)
 public class Sorting3 {
     public static int partition(int arr[], int low, int high) {
         int pivot = arr[high];
