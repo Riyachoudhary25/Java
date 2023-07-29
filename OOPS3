@@ -1,0 +1,46 @@
+//  Inheritance -->
+// Inheritance is a process in which one object acquires all 
+// the properties and behaviors of its parent object automatically
+
+// 1. Single inheritance : When one class inherits another class, it is known as single level inheritance 
+class Shape {
+    public void area() {
+        System.out.println("Displays Area of a shape");
+    }
+}
+
+class Triangle extends Shape {
+    public void area(int l, int h) {
+        System.out.println((1 / 2) * l * h);
+    }
+}
+
+// 2. Multilevel inheritance : Multilevel inheritance is a process of deriving a
+// class from another derived class.
+
+class EquilateralTriangle extends Triangle {
+    int side;
+}
+
+// 3. Hierarchical inheritance : Hierarchical inheritance is defined as the
+// process
+// of deriving more than one class from a base class.
+
+class Circle extends Shape {
+    public void area(int r) {
+        System.out.println((3.14) * r * r);
+    }
+}
+
+// // 4. Hybrid inheritance : Hybrid inheritance is a combination of
+// simple, multiple inheritance and hierarchical inheritance.
+
+public class OOPS3 {
+    public static void main(String[] args) {
+        Shape s1 = new Shape();
+        s1.area();
+        Circle c1 =  new Circle();
+        c1.area(4);
+
+    }
+}
