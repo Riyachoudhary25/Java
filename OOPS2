@@ -1,0 +1,32 @@
+//   Polymorphism 
+//  Compile Time Polymorphism (Static) --> Method Overloading .
+// Method Overloading : Method overloading is a technique which allows you to have more than one function with the same function name but with different functionality. Method overloading can be possible on the following basis: 
+// 1. The type of the parameters passed to the function. 
+// 2. The number of parameters passed to the function.
+
+class Employee {
+    String name;
+    int age;
+
+    public void printInfo(String name) {
+        System.out.println(name);
+    }
+
+    public void printInfo(int age) {
+        System.out.println(age);
+    }
+
+    public void printInfo(String name, int age) {
+        System.out.println(name + " " + age);
+
+    }
+}
+
+public class OOPS2 {
+    public static void main(String[] args) {
+        Employee e1 = new Employee();
+        e1.name = "Riya";
+        e1.age = 23;
+        e1.printInfo(e1.name, e1.age);
+    }
+}
