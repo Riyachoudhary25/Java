@@ -92,27 +92,82 @@ public class LL {
         return size;
     }
 
+    // reverse a linked list (Iterative)
+    // Iterative Method
+    // Time complexity - O(n)
+    // Space complexity - O(1)
+    public void reverseList() {
+        if (head == null || head.next == null) {
+            return;
+        }
+
+        Node prevNode = head;
+        Node currNode = head.next;
+        while (currNode != null) {
+            Node nextNode = currNode.next;
+            currNode.next = prevNode;
+            prevNode = currNode;
+            currNode = nextNode;
+        }
+        head.next = null;
+        head = prevNode;
+    }
+
+    // Recursive Method
+    // Time complexity - O(n)
+    // Space complexity - O(1)
+
+    public Node reverseListRecursive(Node head) {
+        if (head == null || head.next == null) {
+            return head;
+        }
+        Node newHead = reverseListRecursive(head.next);
+        head.next.next = head;
+        head.next = null;
+        return newHead;
+    }
+
     public static void main(String[] args) {
         LL list = new LL();
-        list.addFirst("a");
-        list.addFirst("is");
+        // list.addFirst("a");
+        // list.addFirst("is");
+        // list.printList();
+
+        // list.addLAst("List");
+        // list.printList();
+
+        // list.addFirst("this");
+        // list.printList();
+
+        // list.deleteFirst();
+        // list.printList();
+
+        // list.deleteLast();
+        // list.printList();
+
+        // list.addFirst("This");
+        // System.out.println(list.getsize());
+
+        //// reverse a linked list (Iterative) -->
+        // list.addLAst("1");
+        // list.addLAst("2");
+        // list.addLAst("3");
+        // list.addLAst("4");
+        // list.printList();
+
+        // list.reverseList();
+        // list.printList();
+
+        // reverseListRecursive
+        list.addLAst("1");
+        list.addLAst("2");
+        list.addLAst("3");
+        list.addLAst("4");
         list.printList();
 
-        list.addLAst("List");
+        list.head = list.reverseListRecursive(list.head);
         list.printList();
 
-        list.addFirst("this");
-        list.printList();
-
-        list.deleteFirst();
-        list.printList();
-
-        list.deleteLast();
-        list.printList();
-
-        System.out.println(list.getsize());
-        list.addFirst("This");
-        System.out.println(list.getsize());
     }
 }
 // ** variables size
