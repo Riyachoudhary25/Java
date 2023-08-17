@@ -1,0 +1,47 @@
+class TreeNode {
+    int val;
+    TreeNode left;
+    TreeNode right;
+
+    TreeNode(int val) {
+        this.val = val;
+    }
+}
+
+public class TreeNodeB {
+    static boolean areIdentical(TreeNode root1, TreeNode root2) {
+        if (root1 == null && root2 == null)
+            return true;
+        if (root1 == null || root2 == null)
+            return false;
+
+        return (root1.val == root2.val) &&
+                areIdentical(root1.left, root2.left) &&
+                areIdentical(root1.right, root2.right);
+    }
+
+    static boolean isSubtree(TreeNode root1, TreeNode root2) {
+        if (root1 == null)
+            return false;
+
+        if (areIdentical(root1, root2))
+            return true;
+
+        return isSubtree(root1.left, root2) || isSubtree(root1.right, root2);
+    }
+
+    public static void main(String[] args) {
+        TreeNode tree1 = new TreeNode(3);
+        tree1.left = new TreeNode(4);
+        tree1.right = new TreeNode(5);
+        tree1.left.left = new TreeNode(1);
+        tree1.left.right = new TreeNode(2);
+
+        TreeNode tree2 = new TreeNode(4);
+        tree2.left = new TreeNode(1);
+        tree2.right = new TreeNode(2);
+
+        boolean isSubtree = isSubtree(tree1, tree2);
+        System.out.println("Tree2 is a subtree of Tree1: " + isSubtree);
+    }
+}
